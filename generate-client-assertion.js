@@ -5,7 +5,8 @@ const { SignJWT, importPKCS8 } = require("jose");
 const path = require("path");
 const os = require("os");
 
-require("dotenv").config();
+// Load .env from project directory (where this script is located)
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 const [, , argIss, argSub, argAud, argKid, argPrivateKeyPath] = process.argv;
 

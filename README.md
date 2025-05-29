@@ -48,6 +48,8 @@ node generate-client-assertion.js
 
 ### If installed globally:
 
+The global command will automatically use the `.env` file from the project directory, so you can run it from anywhere:
+
 ```bash
 generate-client-assertion
 ```
@@ -60,6 +62,9 @@ node generate-client-assertion.js "new-iss" "new-sub"
 
 # Override all values
 node generate-client-assertion.js "iss" "sub" "aud" "kid" "/path/to/key.key"
+
+# With global installation
+generate-client-assertion "iss" "sub" "aud" "kid" "/path/to/key.key"
 ```
 
 ## Features
